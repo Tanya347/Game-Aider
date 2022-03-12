@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 400px;
+    max-height: 400px;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: #F0FFC2;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 10px;
+}
+
+
+
+.shake{
+    animation: shake 1s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(-90deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/number.css">
     <title>Random</title>
 </head>
 
@@ -19,6 +19,24 @@
     <input type="number" id="ei" placeholder="upper bound">
     <button id="numberButton">Generate Random Number</button>
     <h3>Your random number is: <span id="answer"></span> </h3>
+
+    <div class="container">
+        <div class="dice">
+            <img id="SingleDice" src="Assets/1.svg">
+        </div>
+        <p id="result1"></p>
+        <button onclick="roll1()">ROLL</button>
+    </div>
+
+    <div class="container">
+        <div class="dice">
+            <img class="twoDie" src="Assets/1.svg">
+            <img class="twoDie" src="Assets/6.svg">
+        </div>
+        <p id="result2"></p>
+        <button onclick="roll2()">ROLL</button>
+    </div>
+
     <button><a href="/">Go to Home</a></button>
     <script src="\js\number.js"></script>
 </body>

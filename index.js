@@ -21,8 +21,8 @@ app.get('/colour', (req, res) => {
     res.render('colour');
 })
 
-app.get('/photo', (req, res) => {
-    res.render('photos');
+app.get('/movie', (req, res) => {
+    res.render('movie');
 })
 
 app.listen(port, () => {
