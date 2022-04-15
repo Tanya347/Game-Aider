@@ -1,3 +1,5 @@
+//Picking names
+
 let nameArray = [];
 const display = document.getElementById('display');
 
@@ -11,6 +13,8 @@ function pickName() {
     let index = Math.floor(Math.random() * nameArray.length);
     display.textContent = nameArray[index];
 }
+
+//Truth
 
 var truths = [
     "When was the last time you lied?",
@@ -33,22 +37,23 @@ var truths = [
     "What's your biggest insecurity?"
 ]
 
+const questions = document.getElementById('truth-questions')
+
 function togglePopup() {
-    const content = document.getElementById('truth-questions')
-    content.innerHTML = " ";
+    questions.innerHTML = " ";
     for (truth of truths) {
-        const para = document.createElement("button");
-        para.textContent = truth;
-        content.appendChild(para);
+        const q = document.createElement("button");
+        q.textContent = truth;
+        questions.appendChild(q);
     }
     document.getElementById("popup-1").classList.toggle("active");
 }
-const popup = document.querySelector('.content');
 
-popup.addEventListener('click', (e) => {
-
-    const list = document.getElementById('truth-questions');
-    list.removeChild(e.target);
+questions.addEventListener('click', (e) => {
+    const text = e.target.textContent;
+    const index = truths.indexOf(text);
+    truths.splice(index, 1);
+    questions.removeChild(e.target);
 })
 
 const generateButton = document.querySelector('.generate');
@@ -64,7 +69,11 @@ const input = document.getElementById("add");
 const addQuestionButton = document.getElementById('submit-question')
 
 addQuestionButton.addEventListener('click', () => {
-    if (truths.includes(input.value) == 0)
+    if (truths.includes(input.value) == 0) {
         truths.push(input.value);
+        const q = document.createElement("button");
+        q.textContent = input.value;
+        questions.appendChild(q);
+    }
     input.value = "";
 })

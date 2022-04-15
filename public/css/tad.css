@@ -11,9 +11,9 @@
 
 .popup .content {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    transform: translate(-0%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
     background: #fff;
     width: 450px;
     height: fit-content;
