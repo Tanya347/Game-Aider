@@ -25,6 +25,10 @@ app.get('/movie', (req, res) => {
     res.render('movie');
 })
 
+app.get('/tad', (req, res) => {
+    res.render('tad');
+})
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+
+<body>
+    <h1>RANDOM NAME PICKER</h1>
+    <label for="names">ENTER NAMES</label>
+    <textarea name="" id="names" cols="30" rows="10" placeholder="Enter name followed by a ','""></textarea>
+    <h2 id=" chosen"></h2>
+    <button onclick="pickName()"><a href="#">Pick</a></button>
+    <div id="display"></div>
+    <script src="\js\tad.js"></script>
+
+    <div class="popup" id="truth">
+        <div class="overlay"></div>
+        <div class="content">
+            <button class="close" onclick="togglePopup()">&times;</button>
+            <h1>Truth Questions</h1>
+            <h2>Click on a question to remove it</h2>
+            <label for="add">Add your own question : </label>
+            <input type="text" id="add" placeholder="Add question">
+            <button id="submit-question">Add</button>
+            <div id="truth-questions"></div>
+        </div>
+    </div>
+
+    <button onclick="togglePopup()">Show Questions</button>
+
+</body>
+
+</html>
