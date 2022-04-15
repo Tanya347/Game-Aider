@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\tad.css">
     <title>Random</title>
 </head>
 
@@ -15,23 +16,27 @@
     <h2 id=" chosen"></h2>
     <button onclick="pickName()"><a href="#">Pick</a></button>
     <div id="display"></div>
-    <script src="\js\tad.js"></script>
 
-    <div class="popup" id="truth">
-        <div class="overlay"></div>
+    <div class="popup" id="popup-1">
+        <div class="overlay" onclick="togglePopup()"></div>
         <div class="content">
-            <button class="close" onclick="togglePopup()">&times;</button>
+            <div class="close-button" onclick="togglePopup()">&times;</div>
             <h1>Truth Questions</h1>
-            <h2>Click on a question to remove it</h2>
-            <label for="add">Add your own question : </label>
-            <input type="text" id="add" placeholder="Add question">
-            <button id="submit-question">Add</button>
-            <div id="truth-questions"></div>
+            <div id="truth-questions">
+            </div>
         </div>
     </div>
 
-    <button onclick="togglePopup()">Show Questions</button>
+    <button onclick="togglePopup()">Show PopUp</button>
+    <button class="generate">Generate Question</button>
+    <div id="question"></div>
 
+    <label for="add">Add your own question : </label>
+    <input type="text" id="add" placeholder="Add question">
+    <button id="submit-question">Add</button>
+
+
+    <script src="\js\tad.js"></script>
 </body>
 
 </html>
