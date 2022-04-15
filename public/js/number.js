@@ -1,9 +1,9 @@
-let images = ["Assets/1.svg",
-    "Assets/2.svg",
-    "Assets/3.svg",
-    "Assets/4.svg",
-    "Assets/5.svg",
-    "Assets/6.svg",
+let images = ["Assets/Dice/1.svg",
+    "Assets/Dice/2.svg",
+    "Assets/Dice/3.svg",
+    "Assets/Dice/4.svg",
+    "Assets/Dice/5.svg",
+    "Assets/Dice/6.svg",
 ]
 
 let dice = document.getElementById("SingleDice");

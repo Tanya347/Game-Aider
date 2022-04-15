@@ -18,7 +18,7 @@ app.get('/number', (req, res) => {
 })
 
 app.get('/colour', (req, res) => {
-    res.render('colour');
+    res.render('song');
 })
 
 app.get('/movie', (req, res) => {

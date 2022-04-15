@@ -26,3 +26,17 @@ colourButton.addEventListener("click", function () {
     else
         document.body.style.color = "black";
 })
+
+
+/**************** Song 1 ****************/
+const Song = document.getElementById("Song")
+const play = document.getElementById("play")
+play.addEventListener('click', () => {
+    if (Song.paused) {
+        Song.play();
+        play.src = "Assets/Song/pause.jpg";
+    } else {
+        Song.pause();
+        play.src = "Assets/Song/play.jpg";
+    }
+})
