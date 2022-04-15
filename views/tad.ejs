@@ -17,29 +17,67 @@
     <button onclick="pickName()"><a href="#">Pick</a></button>
     <div id="display"></div>
 
-    <div class="popup" id="popup-1">
-        <div class="overlay" onclick="togglePopup()"></div>
-        <div class="content">
-            <div class="close-button" onclick="togglePopup()">&times;</div>
-            <h1>Truth Questions</h1>
-            <h2>Click on the question to remove it</h2>
-            <label for="add">Add your own question : </label>
-            <input type="text" id="add" placeholder="Add question">
-            <button id="submit-question">Add</button>
-            <div id="truth-questions">
+    <section>
+        <div class="box">
+            <div class="popup" id="truth">
+                <div class="overlay" onclick="toggleTruth()"></div>
+                <div class="content">
+                    <div class="close-button" onclick="toggleTruth()">&times;</div>
+                    <h1>Truth Questions</h1>
+                    <h2>Click on a question to remove it</h2>
+                    <label for="add">Add your own question : </label>
+                    <input type="text" id="addTruth" placeholder="Add question">
+                    <button id="submit-question" onclick="addQuestion()">Add</button>
+                    <div id="truth-questions">
+                    </div>
+                </div>
             </div>
+
+            <button onclick="toggleTruth()">View Questions</button>
+            <button onclick="generateTruth()">Generate Question</button>
+            <div id="question"></div>
         </div>
-    </div>
 
-    <button onclick="togglePopup()">Show PopUp</button>
-    <button class="generate">Generate Question</button>
-    <div id="question"></div>
+        <div class="box">
+            <div class="popup" id="dare">
+                <div class="overlay" onclick="toggleDare()"></div>
+                <div class="content">
+                    <div class="close-button" onclick="toggleDare()">&times;</div>
+                    <h1>Dare Tasks</h1>
+                    <h2>Click on a task to remove it</h2>
+                    <label for="add">Add your own task : </label>
+                    <input type="text" id="addTask" placeholder="Add task">
+                    <button id="submit-task" onclick="addTask()">Add</button>
+                    <div id="dares">
+                    </div>
+                </div>
+            </div>
 
-    <!-- <label for="add">Add your own question : </label>
-    <input type="text" id="add" placeholder="Add question">
-    <button id="submit-question">Add</button> -->
+            <button onclick="toggleDare()">View Dares</button>
+            <button onclick="generateDare()">Generate Dare</button>
+            <div id="task"></div>
+        </div>
 
+        <div class="box">
+            <div class="popup" id="never">
+                <div class="overlay" onclick="toggleNever()"></div>
+                <div class="content">
+                    <div class="close-button" onclick="toggleNever()">&times;</div>
+                    <h1>Truth Questions</h1>
+                    <h2>Click on the question to remove it</h2>
+                    <label for="add">Add your own question : </label>
+                    <input type="text" id="addNever" placeholder="Add question">
+                    <button id="submit-never" onclick="addNever()">Add</button>
+                    <div id="never-questions">
+                    </div>
+                </div>
+            </div>
 
+            <button onclick="toggleNever()">View Questions</button>
+            <button onclick="generateNever()">Generate Never Have I Ever</button>
+            <div id="neverHaveI"></div>
+        </div>
+    </section>
     <script src="\js\tad.js"></script>
 </body>
 
