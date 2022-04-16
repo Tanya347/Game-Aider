@@ -27,31 +27,20 @@
 //         document.body.style.color = "black";
 // })
 
-const s1 = document.getElementById("Song1")
-const s2 = document.getElementById("Song2")
-const s3 = document.getElementById("Song3")
-const s4 = document.getElementById("Song4")
-const s5 = document.getElementById("Song5")
-const arr_song = [s1, s2, s3, s4, s5]
+const song = document.querySelectorAll('.song')
 
-const p1 = document.getElementById("play1")
-const p2 = document.getElementById("play2")
-const p3 = document.getElementById("play3")
-const p4 = document.getElementById("play4")
-const p5 = document.getElementById("play5")
-const arr_play = [p1, p2, p3, p4, p5]
+const play = document.querySelectorAll('.play')
 
 function mainPlay(s, p) {
     for (let i = 0; i < 5; i++) {
-        if (arr_song[i] == s)
+        if (song[i] == s)
             continue
         else {
-            arr_song[i].pause();
-            arr_play[i].src = "Assets/Song/play.jpg";
+            song[i].pause();
+            play[i].src = "Assets/Song/play.jpg";
         }
     }
 
-    document.querySelector("body").classList.toggle("change");
     if (s.paused) {
         s.play();
         p.src = "Assets/Song/pause.jpg";
@@ -59,24 +48,36 @@ function mainPlay(s, p) {
         s.pause();
         p.src = "Assets/Song/play.jpg";
     }
+
+    let flag = 0;
+    for (pl of play) {
+        if (pl.src === "http://localhost:4004/Assets/Song/pause.jpg") {
+            flag = 1;
+            document.querySelector("body").classList.add("change");
+        }
+    }
+
+    if (flag === 0) {
+        document.querySelector("body").classList.remove("change");
+    }
 }
 
-p1.addEventListener('click', () => {
-    mainPlay(s1, p1);
+play[0].addEventListener('click', () => {
+    mainPlay(song[0], play[0]);
 })
 
-p2.addEventListener('click', () => {
-    mainPlay(s2, p2);
+play[1].addEventListener('click', () => {
+    mainPlay(song[1], play[1]);
 })
 
-p3.addEventListener('click', () => {
-    mainPlay(s3, p3);
+play[2].addEventListener('click', () => {
+    mainPlay(song[2], play[2]);
 })
 
-p4.addEventListener('click', () => {
-    mainPlay(s4, p4);
+play[3].addEventListener('click', () => {
+    mainPlay(song[3], play[3]);
 })
 
-p5.addEventListener('click', () => {
-    mainPlay(s5, p5);
+play[4].addEventListener('click', () => {
+    mainPlay(song[4], play[4]);
 })
