@@ -27,16 +27,118 @@ colourButton.addEventListener("click", function () {
         document.body.style.color = "black";
 })
 
+const songs = ["Assets/Song/Baepsae.mp3",
+    "Assets/Song/134340.mp3",
+    "Assets/Song/DNA.mp3",
+    "Assets/Song/Ddaeng.mp3",
+    "Assets/Song/Look Here.mp3"
+]
 
-/**************** Song 1 ****************/
-const Song = document.getElementById("Song")
-const play = document.getElementById("play")
-play.addEventListener('click', () => {
-    if (Song.paused) {
-        Song.play();
-        play.src = "Assets/Song/pause.jpg";
-    } else {
-        Song.pause();
-        play.src = "Assets/Song/play.jpg";
+const s1 = document.getElementById("Song1")
+const s2 = document.getElementById("Song2")
+const s3 = document.getElementById("Song3")
+const s4 = document.getElementById("Song4")
+const s5 = document.getElementById("Song5")
+const arr_song = [s1, s2, s3, s4, s5]
+
+const p1 = document.getElementById("play1")
+const p2 = document.getElementById("play2")
+const p3 = document.getElementById("play3")
+const p4 = document.getElementById("play4")
+const p5 = document.getElementById("play5")
+const arr_play = [p1, p2, p3, p4, p5]
+
+function playSong1() {
+    for (let i = 0; i < 5; i++) {
+        if (arr_song[i] == s1)
+            continue
+        else {
+            arr_song[i].pause();
+            arr_play[i].src = "Assets/Song/play.jpg";
+        }
     }
-})
+
+    if (s1.paused) {
+        s1.play();
+        p1.src = "Assets/Song/pause.jpg";
+    } else {
+        s1.pause();
+        p1.src = "Assets/Song/play.jpg";
+    }
+}
+
+function playSong2() {
+    for (let i = 0; i < 5; i++) {
+        if (arr_song[i] == s2)
+            continue
+        else {
+            arr_song[i].pause();
+            arr_play[i].src = "Assets/Song/play.jpg";
+        }
+    }
+
+    if (s2.paused) {
+        s2.play();
+        p2.src = "Assets/Song/pause.jpg";
+    } else {
+        s2.pause();
+        p2.src = "Assets/Song/play.jpg";
+    }
+}
+
+function playSong3() {
+    for (let i = 0; i < 5; i++) {
+        if (arr_song[i] == s3)
+            continue
+        else {
+            arr_song[i].pause();
+            arr_play[i].src = "Assets/Song/play.jpg";
+        }
+    }
+
+    if (s3.paused) {
+        s3.play();
+        p3.src = "Assets/Song/pause.jpg";
+    } else {
+        s3.pause();
+        p3.src = "Assets/Song/play.jpg";
+    }
+}
+
+function playSong4() {
+    for (let i = 0; i < 5; i++) {
+        if (arr_song[i] == s4)
+            continue
+        else {
+            arr_song[i].pause();
+            arr_play[i].src = "Assets/Song/play.jpg";
+        }
+    }
+
+    if (s4.paused) {
+        s4.play();
+        p4.src = "Assets/Song/pause.jpg";
+    } else {
+        s4.pause();
+        p4.src = "Assets/Song/play.jpg";
+    }
+}
+
+function playSong5() {
+    for (let i = 0; i < 5; i++) {
+        if (arr_song[i] == s5)
+            continue
+        else {
+            arr_song[i].pause();
+            arr_play[i].src = "Assets/Song/play.jpg";
+        }
+    }
+
+    if (s5.paused) {
+        s5.play();
+        p5.src = "Assets/Song/pause.jpg";
+    } else {
+        s5.pause();
+        p5.src = "Assets/Song/play.jpg";
+    }
+}
