@@ -84,124 +84,103 @@ const neverHave = document.getElementById('never-questions')
 /**************  POP UP DISPLAY FUNCTIONS  ***************/
 
 //truth questions 
-function toggleTruth() {
-    questions.innerHTML = " ";
-    for (truth of truths) {
+
+function toggle(popup, entity, array) {
+    entity.innerHTML = " ";
+    for (a of array) {
         const q = document.createElement("button");
-        q.textContent = truth;
-        questions.appendChild(q);
+        q.textContent = a;
+        entity.appendChild(q);
     }
-    document.getElementById("truth").classList.toggle("active");
+    popup.classList.toggle("active");
 }
 
-//dare tasks
+//truth
+function toggleTruth() {
+    toggle(document.getElementById("truth"), questions, truths);
+}
+
+//dare
 function toggleDare() {
-    dareTasks.innerHTML = " ";
-    for (dare of dares) {
-        const d = document.createElement("button");
-        d.textContent = dare;
-        dareTasks.appendChild(d);
-    }
-    document.getElementById("dare").classList.toggle("active");
+    toggle(document.getElementById("dare"), dareTasks, dares);
 }
 
 //never have I evers
 function toggleNever() {
-    neverHave.innerHTML = " ";
-    for (nev of nevers) {
-        const n = document.createElement("button");
-        n.textContent = nev;
-        neverHave.appendChild(n);
-    }
-    document.getElementById("never").classList.toggle("active");
+    toggle(document.getElementById("never"), neverHave, nevers);
 }
 
 /****************  DELETE OPTIONS  *****************/
 
+function deleteElement(target, entity, array) {
+    const index = array.indexOf(target.textContent);
+    array.splice(index, 1);
+    entity.removeChild(target);
+}
+
 //truth
 questions.addEventListener('click', (e) => {
-    const index = truths.indexOf(e.target.textContent);
-    truths.splice(index, 1);
-    questions.removeChild(e.target);
+    deleteElement(e.target, questions, truths);
 })
 
 //dare
 dareTasks.addEventListener('click', (e) => {
-    const index = dares.indexOf(e.target.textContent);
-    dares.splice(index, 1);
-    dareTasks.removeChild(e.target);
+    deleteElement(e.target, dareTasks, dares);
 })
 
 //never have I evers
 neverHave.addEventListener('click', (e) => {
-    const index = nevers.indexOf(e.target.textContent);
-    nevers.splice(index, 1);
-    neverHave.removeChild(e.target);
+    deleteElement(e.target, neverHave, nevers);
 })
 
 /********************  GENERATOR FUNCTIONS  *********************/
 
+function generate(display, array) {
+    display.textContent = "";
+    let index = Math.floor(Math.random() * array.length)
+    display.textContent = array[index];
+}
+
 //truth
 function generateTruth() {
-    const display = document.getElementById('question');
-    display.textContent = "";
-    let index = Math.floor(Math.random() * truths.length)
-    display.textContent = truths[index];
+    generate(document.getElementById('question'), truths);
 }
 
 //Dare
 function generateDare() {
-    const display = document.getElementById('task');
-    display.textContent = "";
-    let index = Math.floor(Math.random() * dares.length)
-    display.textContent = dares[index];
+    generate(document.getElementById('task'), dares);
 }
 
 //Never Have I ever
 function generateNever() {
-    const display = document.getElementById('neverHaveI');
-    display.textContent = "";
-    let index = Math.floor(Math.random() * nevers.length)
-    display.textContent = nevers[index];
+    generate(document.getElementById('question'), nevers);
 }
 
 /*********************  CUSTOM ADDERS  ***********************/
 
-//truth
-const inputT = document.getElementById("addTruth");
-
-function addQuestion() {
-    if (truths.includes(inputT.value) == 0) {
-        truths.push(inputT.value);
+function add(input, array, entity) {
+    if (array.includes(input.value) == 0) {
+        array.push(input.value);
         const q = document.createElement("button");
-        q.textContent = inputT.value;
-        questions.appendChild(q);
+        q.textContent = input.value;
+        entity.appendChild(q);
     }
-    inputT.value = "";
+    input.value = "";
+}
+
+//truth
+function addQuestion() {
+    add(document.getElementById("addTruth"), truths, questions)
 }
 
 //dare
-const inputD = document.getElementById("addTask");
-
 function addTask() {
-    if (dares.includes(inputD.value) == 0) {
-        dares.push(inputD.value);
-        const q = document.createElement("button");
-        q.textContent = inputD.value;
-        dareTasks.appendChild(q);
-    }
-    inputD.value = "";
+    add(document.getElementById("addTask"), dares, dareTasks)
 }
 
 //never have I ever
 const inputN = document.getElementById("addNever");
 
 function addNever() {
-    if (nevers.includes(inputN.value) == 0) {
-        nevers.push(inputN.value);
-        const q = document.createElement("button");
-        q.textContent = inputN.value;
-        neverHave.appendChild(q);
-    }
-    inputN.value = "";
+    add(document.getElementById("addNever"), nevers, neverHave)
 }
