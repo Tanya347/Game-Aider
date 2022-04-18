@@ -1,32 +1,3 @@
-// const colourButton = document.getElementById("colour");
-// const h1 = document.querySelector("h1");
-// let colourtype;
-
-// function generateColor() {
-//     let r = Math.floor(Math.random() * 255) + 1;
-//     let g = Math.floor(Math.random() * 255) + 1;
-//     let b = Math.floor(Math.random() * 255) + 1;
-
-//     const hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
-//     if (hsp > 127.5)
-//         colourtype = "light";
-//     else
-//         colourtype = "dark";
-
-//     return `rgb(${r}, ${g}, ${b})`;
-
-// }
-
-// colourButton.addEventListener("click", function () {
-//     const newColor = generateColor();
-//     document.body.style.backgroundColor = newColor;
-//     h1.textContent = "The color is " + newColor;
-//     if (colourtype === "dark")
-//         document.body.style.color = "white";
-//     else
-//         document.body.style.color = "black";
-// })
-
 const song = document.querySelectorAll('.song')
 
 const play = document.querySelectorAll('.play')
@@ -51,7 +22,7 @@ function mainPlay(s, p) {
 
     let flag = 0;
     for (pl of play) {
-        if (pl.src === "http://localhost:4004/Assets/Song/pause.jpg") {
+        if (pl.src === "https://indoors-app.herokuapp.com//Assets/Song/pause.jpg") {
             flag = 1;
             document.querySelector("body").classList.add("change");
         }

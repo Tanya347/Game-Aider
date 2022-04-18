@@ -17,7 +17,7 @@ app.get('/number', (req, res) => {
     res.render('number');
 })
 
-app.get('/colour', (req, res) => {
+app.get('/song', (req, res) => {
     res.render('song');
 })
 
