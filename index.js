@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = 4004;
+const port = process.env.PORT || 4004
 
 //view engine setup
 app.use(express.urlencoded({ extended: true }));
