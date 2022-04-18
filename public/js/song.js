@@ -22,7 +22,7 @@ function mainPlay(s, p) {
 
     let flag = 0;
     for (pl of play) {
-        if (pl.src === "https://indoors-app.herokuapp.com//Assets/Song/pause.jpg") {
+        if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.jpg") {
             flag = 1;
             document.querySelector("body").classList.add("change");
         }
