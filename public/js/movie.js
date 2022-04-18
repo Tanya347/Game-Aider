@@ -3,14 +3,11 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_URL = BASE_URL + 'discover/movie?sort_by=popularity.desc&' + API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500'
 const searchURL = BASE_URL + 'search/movie?' + API_KEY
-const findURL = BASE_URL + 'find/2/?' + API_KEY + '&language=en-US&external_source=imdb_id';
-console.log(findURL);
+
 const main = document.getElementById('main');
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const random = document.getElementById('random')
-
-// getMovies(API_URL);
 
 function getMovies(url) {
     fetch(url).then(res => res.json()).then(data => {
