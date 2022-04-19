@@ -3,15 +3,16 @@
 }
 
 body {
-    background-color: bisque;
     margin: 0;
+    background-color: #150050;
+    color: white;
 }
 
 header {
+    margin-top: 100px;
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
-    background-color: cadetblue;
 }
 
 .search {

@@ -5,40 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/number.css">
-    <title>Random</title>
+    <link rel="stylesheet" href="/css/number.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <title>Game Aider</title>
 </head>
 
 <body>
-    <h1>Random App</h1>
+    <%- include('partials/navbar')%>
+        <h2>Random Number</h2>
+        <label for="si">Enter lower bound</label>
+        <input type="number" id="si" placeholder="lower bound">
+        <label for="ei">Enter upper bound</label>
+        <input type="number" id="ei" placeholder="upper bound">
+        <button id="numberButton">Generate Random Number</button>
+        <h3>Your random number is: <span id="answer"></span> </h3>
 
-    <h2>Random Number</h2>
-    <label for="si">Enter lower bound</label>
-    <input type="number" id="si" placeholder="lower bound">
-    <label for="ei">Enter upper bound</label>
-    <input type="number" id="ei" placeholder="upper bound">
-    <button id="numberButton">Generate Random Number</button>
-    <h3>Your random number is: <span id="answer"></span> </h3>
-
-    <div class="container">
-        <div class="dice">
-            <img id="SingleDice" src="Assets/Dice/1.svg">
+        <div class="container">
+            <div class="dice">
+                <img id="SingleDice" src="Assets/Dice/1.svg">
+            </div>
+            <p id="result1"></p>
+            <button onclick="roll1()">ROLL</button>
         </div>
-        <p id="result1"></p>
-        <button onclick="roll1()">ROLL</button>
-    </div>
 
-    <div class="container">
-        <div class="dice">
-            <img class="twoDie" src="Assets/Dice/1.svg">
-            <img class="twoDie" src="Assets/Dice/6.svg">
+        <div class="container">
+            <div class="dice">
+                <img class="twoDie" src="Assets/Dice/1.svg">
+                <img class="twoDie" src="Assets/Dice/6.svg">
+            </div>
+            <p id="result2"></p>
+            <button onclick="roll2()">ROLL</button>
         </div>
-        <p id="result2"></p>
-        <button onclick="roll2()">ROLL</button>
-    </div>
 
-    <button><a href="/">Go to Home</a></button>
-    <script src="\js\number.js"></script>
+        <button><a href="/">Go to Home</a></button>
+        <script src="\js\number.js"></script>
 </body>
 
 </html>

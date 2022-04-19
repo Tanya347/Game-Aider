@@ -6,25 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="\css\movie.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="\css\navbar.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <title>Game Aider</title>
 </head>
 
 <body>
-    <header>
-        <form action="" id="form">
-            <input type="text" placeholder="search" id="search" class="search">
-        </form>
-    </header>
 
-    <div id="random">
-    </div>
-    <button id="generate" onclick="generateMovie()">Generate Random Movie</button>
+    <%- include('partials/navbar')%>
+        <header>
+            <form action="" id="form">
+                <input type="text" placeholder="search" id="search" class="search">
+            </form>
+        </header>
 
-    <main id="main">
+        <div id="random">
+        </div>
+        <button id="generate" onclick="generateMovie()">Generate Random Movie</button>
 
-    </main>
+        <main id="main">
 
-    <script src="\js\movie.js"></script>
+        </main>
+        <script src="\js\movie.js"></script>
 </body>
 
 </html>

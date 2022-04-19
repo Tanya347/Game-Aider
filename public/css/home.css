@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #150050;
+    background: url(bg.png) repeat fixed 100%;
+    background-position: center;
+    background-size: cover;
     color: white;
 }
