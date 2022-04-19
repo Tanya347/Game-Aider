@@ -14,19 +14,21 @@
 <body>
 
     <%- include('partials/navbar')%>
-        <header>
-            <form action="" id="form">
-                <input type="text" placeholder="search" id="search" class="search">
-            </form>
-        </header>
+        <section id="movie-section">
+            <div id="random">
+            </div>
+            <button id="generate" onclick="generateMovie()">Generate Random Movie</button>
+            <header>
+                <p>Or enter a keyword to search related movie ideas</p>
+                <form action="" id="form">
+                    <input type="text" placeholder="search" id="search" class="search">
+                </form>
+            </header>
 
-        <div id="random">
-        </div>
-        <button id="generate" onclick="generateMovie()">Generate Random Movie</button>
+            <main id="main">
 
-        <main id="main">
-
-        </main>
+            </main>
+        </section>
         <script src="\js\movie.js"></script>
 </body>
 
