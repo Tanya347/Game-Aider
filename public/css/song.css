@@ -1,7 +1,37 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+#song-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    text-align: center;
+}
+
+.song-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+
+#dance {
+    height: 300px;
+}
+
+#song-section h3 {
+    width: 70%;
+    margin: 60px 0;
 }
 
 .change {
@@ -12,41 +42,49 @@
 
 @keyframes changeBg {
     0% {
-        background-color: aqua;
+        background-color: #916BBF;
     }
 
     25% {
-        background-color: yellow;
+        background-color: #3D2C8D;
     }
 
     50% {
-        background-color: blue;
+        background-color: #610094;
     }
 
     75% {
-        background-color: palevioletred;
+        background-color: #3F0071;
     }
 
     100% {
-        background-color: aqua;
+        background-color: #916BBF;
     }
 }
 
-.container {
+.song-container {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 20%;
+    padding: 30px;
 }
-*/
+
 .play {
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
 }
 
-/* section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}  */
+@media screen and (max-width: 900px) {
+    .song-container {
+        width: 50%;
+    }
+
+    #dance {
+        height: 180px;
+    }
+}

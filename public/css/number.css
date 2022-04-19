@@ -25,10 +25,6 @@
     flex-flow: wrap;
 }
 
-h2 {
-    margin-top: 50px;
-}
-
 .dice-container {
     display: flex;
     flex-direction: column;
@@ -40,8 +36,8 @@ h2 {
     background-color: #3F0071;
 }
 
-.dice-container h2 {
-    font-size: 1.5rem;
+.dice-container h3 {
+    font-size: 1.25rem;
 }
 
 .dice-container button,
@@ -74,8 +70,9 @@ h2 {
     padding: 10px;
 }
 
-#number-section h2 {
+#que {
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .shake {

@@ -8,22 +8,22 @@ function mainPlay(s, p) {
             continue
         else {
             song[i].pause();
-            play[i].src = "Assets/Song/play.jpg";
+            play[i].src = "Assets/Song/play.png";
         }
     }
 
     if (s.paused) {
         s.play();
-        p.src = "Assets/Song/pause.jpg";
+        p.src = "Assets/Song/pause.png";
     } else {
         s.pause();
-        p.src = "Assets/Song/play.jpg";
+        p.src = "Assets/Song/play.png";
     }
 
     let flag = 0;
     for (pl of play) {
         console.log(pl.src)
-        if (pl.src === "http://localhost:4004/Assets/Song/pause.jpg") {
+        if (pl.src === "http://localhost:4004/Assets/Song/pause.png") {
             // if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.jpg") {
             flag = 1;
             document.querySelector("body").classList.add("change");
