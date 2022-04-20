@@ -24,7 +24,7 @@ function mainPlay(s, p) {
     for (pl of play) {
         console.log(pl.src)
         // if (pl.src === "http://localhost:4004/Assets/Song/pause.png") {
-        if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.jpg") {
+        if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
             flag = 1;
             document.querySelector("body").classList.add("change");
         }
