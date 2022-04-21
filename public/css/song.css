@@ -88,3 +88,11 @@ body {
         height: 180px;
     }
 }
+
+.sub-menu {
+    display: none;
+}
+
+#choose:active .sub-menu {
+    display: block;
+}
