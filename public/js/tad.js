@@ -2,8 +2,13 @@
 
 let nameArray = [];
 const display = document.getElementById('display');
+const spinner = document.getElementById('rotate');
 
 function pickName() {
+    var x = 1024;
+    var b = 9999;
+    var dgre = Math.floor(Math.random() * (x - b)) + b
+    spinner.style.transform = "rotate(" + dgre + "deg)";
     display.textContent = "";
     let names = document.getElementById("names").value;
     nameArray = names.split(',');
@@ -12,6 +17,15 @@ function pickName() {
     }
     let index = Math.floor(Math.random() * nameArray.length);
     display.textContent = nameArray[index];
+    setTimeout(() => {
+        const popup = document.getElementById('names-popup')
+        popup.classList.toggle("active");
+    }, 3000)
+}
+
+function toggleAnswer() {
+    const popup = document.getElementById('names-popup')
+    popup.classList.toggle("active");
 }
 
 var truths = [
@@ -88,7 +102,7 @@ const neverHave = document.getElementById('never-questions')
 function toggle(popup, entity, array) {
     entity.innerHTML = " ";
     for (a of array) {
-        const q = document.createElement("button");
+        const q = document.createElement("p");
         q.textContent = a;
         entity.appendChild(q);
     }

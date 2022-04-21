@@ -13,15 +13,31 @@
 
 <body>
     <%- include('partials/navbar')%>
-        <h1>RANDOM NAME PICKER</h1>
-        <label for="names">ENTER NAMES</label>
-        <textarea name="" id="names" cols="30" rows="10" placeholder="Enter name followed by a ','""></textarea>
-    <h2 id=" chosen"></h2>
-    <button onclick="pickName()"><a href="#">Pick</a></button>
-    <div id="display"></div>
+        <main id="tad-section">
+            <div id="upper-section">
+                <div class="sections">
+                    <img id="rotate" src="\Assets\song\spinner.png" alt="">
+                </div>
+                <div class="sections">
+                    <h2>RANDOM NAME PICKER</h2>
+                    <textarea name="" id="names" placeholder="Enter names followed by a ','""></textarea>
+                <h2 id=" chosen"></h2>
+                <div class="popup" id="names-popup">
+                    <div class="overlay" onclick="toggleAnswer()"></div>
+                    <div class="content">
+                        <div class="close-button" onclick="toggleAnswer()">&times;</div>
+                        <h1 style="color: #FFE2E2;">The Player Is</h1>
+                        <div id="display">
+                        </div>
+                    </div>
+                </div>
+                <button onclick="pickName()">Pick</button>
+            </div>
+            </div>
 
-    <section>
+    <section id="options">
         <div class="box">
+            <h2>Truth</h2>
             <div class="popup" id="truth">
                 <div class="overlay" onclick="toggleTruth()"></div>
                 <div class="content">
@@ -36,12 +52,13 @@
                 </div>
             </div>
 
-            <button onclick="toggleTruth()">View Questions</button>
-            <button onclick="generateTruth()">Generate Question</button>
+            <button class="btn" onclick="toggleTruth()">View Questions</button>
+            <button class="btn" onclick="generateTruth()">Generate Question</button>
             <div id="question"></div>
         </div>
 
         <div class="box">
+            <h2>Dare</h2>
             <div class="popup" id="dare">
                 <div class="overlay" onclick="toggleDare()"></div>
                 <div class="content">
@@ -56,12 +73,13 @@
                 </div>
             </div>
 
-            <button onclick="toggleDare()">View Dares</button>
-            <button onclick="generateDare()">Generate Dare</button>
+            <button class="btn" onclick="toggleDare()">View Dares</button>
+            <button class="btn" onclick="generateDare()">Generate Dare</button>
             <div id="task"></div>
         </div>
 
         <div class="box">
+            <h2>Never Have I Ever</h2>
             <div class="popup" id="never">
                 <div class="overlay" onclick="toggleNever()"></div>
                 <div class="content">
@@ -76,11 +94,12 @@
                 </div>
             </div>
 
-            <button onclick="toggleNever()">View Questions</button>
-            <button onclick="generateNever()">Generate Never Have I Ever</button>
+            <button class="btn" onclick="toggleNever()">View Questions</button>
+            <button class="btn" onclick="generateNever()">Generate Never Have I Ever</button>
             <div id="neverHaveI"></div>
         </div>
     </section>
+    </main>
     <script src="\js\tad.js"></script>
 </body>
 
