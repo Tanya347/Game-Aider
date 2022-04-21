@@ -22,16 +22,16 @@
                     <h2>RANDOM NAME PICKER</h2>
                     <textarea name="" id="names" placeholder="Enter names followed by a ','""></textarea>
                 <h2 id=" chosen"></h2>
-                <div class="popup" id="names-popup">
+                <div class="name" id="names-popup">
                     <div class="overlay" onclick="toggleAnswer()"></div>
                     <div class="content">
-                        <div class="close-button" onclick="toggleAnswer()">&times;</div>
+                        <button class="close-button" onclick="toggleAnswer()">&times;</button>
                         <h1 style="color: #FFE2E2;">The Player Is</h1>
                         <div id="display">
                         </div>
                     </div>
                 </div>
-                <button onclick="pickName()">Pick</button>
+                <button class="pick" onclick="pickName()">Pick</button>
             </div>
             </div>
 
@@ -41,7 +41,7 @@
             <div class="popup" id="truth">
                 <div class="overlay" onclick="toggleTruth()"></div>
                 <div class="content">
-                    <div class="close-button" onclick="toggleTruth()">&times;</div>
+                    <button class="close-button" onclick="toggleTruth()">&times;</button>
                     <h1>Truth Questions</h1>
                     <h2>Click on a question to remove it</h2>
                     <label for="add">Add your own question : </label>
@@ -62,7 +62,7 @@
             <div class="popup" id="dare">
                 <div class="overlay" onclick="toggleDare()"></div>
                 <div class="content">
-                    <div class="close-button" onclick="toggleDare()">&times;</div>
+                    <button class="close-button" onclick="toggleDare()">&times;</button>
                     <h1>Dare Tasks</h1>
                     <h2>Click on a task to remove it</h2>
                     <label for="add">Add your own task : </label>
@@ -83,8 +83,8 @@
             <div class="popup" id="never">
                 <div class="overlay" onclick="toggleNever()"></div>
                 <div class="content">
-                    <div class="close-button" onclick="toggleNever()">&times;</div>
-                    <h1>Truth Questions</h1>
+                    <button class="close-button" onclick="toggleNever()">&times;</button>
+                    <h1>Never Have I Ever</h1>
                     <h2>Click on the question to remove it</h2>
                     <label for="add">Add your own question : </label>
                     <input type="text" id="addNever" placeholder="Add question">

@@ -1,11 +1,11 @@
-.popup .overlay {
+.overlay {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
-    z-index: 1;
+    z-index: 10;
     display: none;
 }
 
@@ -41,7 +41,7 @@ body {
     text-align: center;
 }
 
-.sections button {
+.sections .pick {
     background-color: #916BBF;
     color: white;
     font-size: 1rem;
@@ -54,7 +54,7 @@ body {
     transition: 0.5s;
 }
 
-.sections button:hover {
+.sections .pick:hover {
     transform: scale(1.05);
     box-shadow: 0 0.5em 0.5em -0.4em rgba(255, 255, 255, 0.5);
     background-color: #610094;
@@ -65,9 +65,8 @@ body {
     color: #610094;
     font-size: 1rem;
     font-weight: 700;
-    text-transform: uppercase;
     width: 80%;
-    padding: 10px 0;
+    padding: 10px 5px;
     cursor: pointer;
     border: none;
     margin: 20px 0;
@@ -84,12 +83,12 @@ body {
     height: 500px;
 }
 
-.popup .content {
+.name .content {
     position: absolute;
-    top: 100%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
     width: 50%;
     height: fit-content;
     z-index: 10;
@@ -103,19 +102,78 @@ body {
     backdrop-filter: blur(2px);
 }
 
-.popup .close-button {
+.name.active .overlay {
+    display: block;
+}
+
+.name.active .content {
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.8);
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.popup .content {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.2);
+    width: 60%;
+    height: fit-content;
+    z-index: 10;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.close-button {
     position: absolute;
     right: 20px;
     top: 20px;
     width: 30px;
     height: 30px;
-    background: #222;
+    background: #C996CC;
+    cursor: pointer;
     color: #fff;
     font-size: 25px;
     font-weight: 600;
-    line-height: 30px;
+    border: none;
     text-align: center;
     border-radius: 50%;
+}
+
+.close-button:hover {
+    transform: scale(1.05);
+    background-color: #916BBF;
+}
+
+#submit-question,
+#submit-task,
+#submit-never {
+    background: #C996CC;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    text-align: center;
+}
+
+#submit-question:hover,
+#submit-task:hover,
+#submit-never:hover {
+    transform: scale(1.05);
+    background-color: #916BBF;
 }
 
 .popup.active .overlay {
@@ -124,8 +182,57 @@ body {
 
 .popup.active .content {
     color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.8);
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
+}
+
+.content h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #C996CC;
+}
+
+.content label {
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.content input {
+    margin: 10px;
+    background: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.content input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.elements {
+    margin: 5px;
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.8);
+    border: solid 3px white;
+    padding: 2px;
+    cursor: pointer;
+    background-color: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.elements:hover {
+    transform: scale(1.05);
+}
+
+#truth-questions,
+#dares,
+#never-questions {
+    margin-top: 20px;
 }
 
 textarea {
@@ -183,6 +290,7 @@ textarea::placeholder {
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 0 2em #FFE2E2;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #rotate {
@@ -200,6 +308,11 @@ textarea::placeholder {
 
     .popup .content {
         width: 70%;
+        margin-top: 400px;
+    }
+
+    .name .content {
+        width: 70%;
     }
 
     .box {
@@ -208,7 +321,7 @@ textarea::placeholder {
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 500px) {
     .sections {
         width: 90%;
     }
@@ -218,6 +331,11 @@ textarea::placeholder {
     }
 
     .popup .content {
+        width: 90%;
+        margin-top: 200px;
+    }
+
+    .name .content {
         width: 90%;
     }
 

@@ -102,9 +102,10 @@ const neverHave = document.getElementById('never-questions')
 function toggle(popup, entity, array) {
     entity.innerHTML = " ";
     for (a of array) {
-        const q = document.createElement("p");
+        const q = document.createElement("button");
         q.textContent = a;
         entity.appendChild(q);
+        q.classList.add("elements");
     }
     popup.classList.toggle("active");
 }
@@ -178,6 +179,7 @@ function add(input, array, entity) {
         const q = document.createElement("button");
         q.textContent = input.value;
         entity.appendChild(q);
+        q.classList.add("elements")
     }
     input.value = "";
 }
@@ -193,8 +195,6 @@ function addTask() {
 }
 
 //never have I ever
-const inputN = document.getElementById("addNever");
-
 function addNever() {
     add(document.getElementById("addNever"), nevers, neverHave)
 }
