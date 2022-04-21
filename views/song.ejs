@@ -14,61 +14,31 @@
 <body>
     <%- include('partials/navbar')%>
         <section id="song-section">
-            <img src="\Assets\dance-min.png" alt="" id="dance">
+            <div class="dropdown-menu">
+                <button class="menu-btn">Choose Song</button>
+                <div class="menu-content">
+                    <a class="links s" href="#">Song1</a>
+                    <a class="links s" href="#"">Song2</a>
+                    <a class=" links s" href="#"">Song3</a>
+                    <a class=" links s" href="#">Song4</a>
+                    <a class="links s" href="#">Song5</a>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="\Assets\dance-min.png" alt="" id="dance">
+                <div class="song-box">
+                    <div class="song-container">
+                        <img src="\Assets\Song\play.png" alt="" class="play" onclick="playSong()">
+                        <audio class=" song">
+                            <source src="\Assets\Song\Ddaeng.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
             <h3> We've got 5 songs for you to play games like musical chairs, passing the parcel or just for
                 dancing!<br><br>
                 you can choose any!</h3>
-            <button id="choose">Choose Song</button>
-            <div class="sub-menu">
-                <ul>
-                    <li><button>Ddaeng (1)</button></li>
-                    <li><button>DNA (2)</button></li>
-                    <li><button>134340 (3)</button></li>
-                    <li><button>Look Here (4)</button></li>
-                    <li><button>Baepsae (5)</button></li>
-                </ul>
-            </div>
-            <div class="song-box">
-                <div class="song-container">
-                    <p>Play Song 1</p>
-                    <img src="\Assets\Song\play.png" alt="" class="play">
-                    <audio class="song">
-                        <source src="\Assets\Song\Baepsae.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-
-                <div class="song-container">
-                    <p>Play Song 2</p>
-                    <img src="\Assets\Song\play.png" alt="" class="play">
-                    <audio class="song">
-                        <source src="\Assets\Song\DNA.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-
-                <div class="song-container">
-                    <p>Play Song 3</p>
-                    <img src="\Assets\Song\play.png" alt="" class="play">
-                    <audio class="song">
-                        <source src="\Assets\Song\134340.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-
-                <div class="song-container">
-                    <p>Play Song 4</p>
-                    <img src="\Assets\Song\play.png" alt="" class="play">
-                    <audio class="song">
-                        <source src="\Assets\Song\Ddaeng.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-
-                <div class="song-container">
-                    <p>Play Song 5</p>
-                    <img src="\Assets\Song\play.png" alt="" class="play">
-                    <audio class="song">
-                        <source src="\Assets\Song\Look Here.mp3" type="audio/mp3">
-                    </audio>
-                </div>
-            </div>
         </section>
 
         <script src="\js\song.js"></script>

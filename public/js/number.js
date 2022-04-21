@@ -19,7 +19,7 @@ function roll1() {
         let value = Math.floor(Math.random() * 6);
         console.log(value);
         document.querySelector("#SingleDice").setAttribute("src", images[value]);
-        document.querySelector("#result1").innerHTML += value + 1;
+        document.querySelector("#r1").innerHTML = value + 1;
     }, 1000
     );
 }
@@ -42,7 +42,7 @@ function roll2() {
         console.log(value1, value2);
         die[0].setAttribute("src", images[value1]);
         die[1].setAttribute("src", images[value2]);
-        document.querySelector("#result2").innerHTML += ((value1 + 1) + (value2 + 1));
+        document.querySelector("#r2").innerHTML = ((value1 + 1) + (value2 + 1));
     }, 1000
     );
 }

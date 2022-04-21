@@ -1,56 +1,92 @@
-const song = document.querySelectorAll('.song')
 
-const play = document.querySelectorAll('.play')
+const songContainer = document.querySelector('.song-container')
+const s = document.querySelectorAll(".s");
 
-function mainPlay(s, p) {
-    for (let i = 0; i < 5; i++) {
-        if (song[i] == s)
-            continue
-        else {
-            song[i].pause();
-            play[i].src = "Assets/Song/play.png";
-        }
-    }
+let dropdownBtn = document.querySelector('.menu-btn');
+let menuContent = document.querySelector('.menu-content');
 
-    if (s.paused) {
-        s.play();
-        p.src = "Assets/Song/pause.png";
+dropdownBtn.addEventListener('click', () => {
+    if (menuContent.style.display === "") {
+        menuContent.style.display = "block";
     } else {
-        s.pause();
-        p.src = "Assets/Song/play.png";
+        menuContent.style.display = "";
+    }
+})
+
+let songs = [
+    "Assets/Song/Ddaeng.mp3",
+    "Assets/Song/DNA.mp3",
+    "Assets/Song/134340.mp3",
+    "Assets/Song/LookHere.mp3",
+    "Assets/Song/Baepsae.mp3"
+]
+
+function changeSong(index) {
+    console.log('hi')
+    songContainer.innerHTML = `
+    <img src = "Assets/Song/play.png" alt = "" class="play" onclick="playSong()">
+    <audio class="song">
+        <source src=${songs[index]} type="audio/mp3">
+    </audio>`
+    const song = document.querySelector('.song')
+    const play = document.querySelector('.play')
+
+    // if (play.src === "http://localhost:4004/Assets/Song/pause.png") {
+    if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
+        document.querySelector("body").classList.add("change");
     }
 
-    let flag = 0;
-    for (pl of play) {
-        console.log(pl.src)
-        // if (pl.src === "http://localhost:4004/Assets/Song/pause.png") {
-        if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
-            flag = 1;
-            document.querySelector("body").classList.add("change");
-        }
-    }
-
-    if (flag === 0) {
+    else {
         document.querySelector("body").classList.remove("change");
     }
 }
 
-play[0].addEventListener('click', () => {
-    mainPlay(song[0], play[0]);
+s[0].addEventListener('click', () => {
+    changeSong(0)
+    menuContent.style.display = "";
 })
 
-play[1].addEventListener('click', () => {
-    mainPlay(song[1], play[1]);
+s[1].addEventListener('click', () => {
+    changeSong(1)
+    menuContent.style.display = "";
 })
 
-play[2].addEventListener('click', () => {
-    mainPlay(song[2], play[2]);
+s[2].addEventListener('click', () => {
+    changeSong(2)
+    menuContent.style.display = "";
 })
 
-play[3].addEventListener('click', () => {
-    mainPlay(song[3], play[3]);
+s[3].addEventListener('click', () => {
+    changeSong(3)
+    menuContent.style.display = "";
 })
 
-play[4].addEventListener('click', () => {
-    mainPlay(song[4], play[4]);
+s[4].addEventListener('click', () => {
+    changeSong(4)
+    menuContent.style.display = "";
 })
+
+function playSong() {
+    const song = document.querySelector('.song')
+    const play = document.querySelector('.play')
+    console.log("hi")
+    if (song.paused) {
+        song.play();
+        play.src = "Assets/Song/pause.png";
+    } else {
+        song.pause();
+        play.src = "Assets/Song/play.png";
+    }
+
+
+    // if (play.src === "http://localhost:4004/Assets/Song/pause.png") {
+    if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
+        document.querySelector("body").classList.add("change");
+    }
+
+    else {
+        document.querySelector("body").classList.remove("change");
+    }
+}
+
+
