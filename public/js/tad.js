@@ -154,6 +154,7 @@ function generate(display, array) {
     display.textContent = "";
     let index = Math.floor(Math.random() * array.length)
     display.textContent = array[index];
+    display.classList.add("generated")
 }
 
 //truth
@@ -168,7 +169,7 @@ function generateDare() {
 
 //Never Have I ever
 function generateNever() {
-    generate(document.getElementById('question'), nevers);
+    generate(document.getElementById('neverHaveI'), nevers);
 }
 
 /*********************  CUSTOM ADDERS  ***********************/

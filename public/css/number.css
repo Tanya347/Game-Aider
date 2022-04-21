@@ -33,7 +33,7 @@
     height: fit-content;
     margin-top: 50px;
     padding: 30px;
-    background-color: #3F0071;
+    background: linear-gradient(#1C0C5B, #3D2C8D);
 }
 
 .dice-container h3 {
@@ -42,19 +42,29 @@
 
 .dice-container button,
 #numberButton {
-    text-align: center;
-    width: fit-content;
-    padding: 10px;
-    font-size: 1.25rem;
+    background-color: #916BBF;
     color: white;
-    margin: 20px 0;
-    font-weight: bold;
-    border: 5px solid #916BBF;
-    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 50%;
+    padding: 10px 5px;
     cursor: pointer;
+    border: none;
+    margin: 20px 0;
     transition: 0.5s;
-    border-radius: 10px;
-    background-color: #3D2C8D;
+    font-weight: bold;
+}
+
+#numberButton {
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.dice-container button:hover,
+#numberButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5em 0.5em -0.4em rgba(255, 255, 255, 0.5);
 }
 
 .result {
@@ -73,10 +83,22 @@
 #que {
     margin-bottom: 50px;
     margin-top: 50px;
+    width: 80%;
+    text-align: center;
 }
 
 .shake {
     animation: shake 1s infinite;
+}
+
+#bottom {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.8);
+    border: solid 3px white;
 }
 
 #random-number label {
@@ -88,10 +110,13 @@
     width: 70%;
     margin: 20px 0;
     text-align: center;
+    font-weight: 600;
 }
 
 #random-number input::placeholder {
-    color: #3D2C8D;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 @keyframes shake {
@@ -111,5 +136,13 @@
 @media screen and (max-width: 1000px) {
     .dice-container {
         width: 90%;
+    }
+
+    #bottom {
+        width: 80%;
+    }
+
+    #numberButton {
+        width: 200px;
     }
 }
