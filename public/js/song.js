@@ -35,7 +35,6 @@ function changeSong(index) {
     if (pl.src === "https://game-aider.herokuapp.com/Assets/Song/pause.png") {
         document.querySelector("body").classList.add("change");
     }
-
     else {
         document.querySelector("body").classList.remove("change");
     }
@@ -83,7 +82,6 @@ function playSong() {
     if (pl.src === "https://game-aider.herokuapp.com/Assets/Song/pause.png") {
         document.querySelector("body").classList.add("change");
     }
-
     else {
         document.querySelector("body").classList.remove("change");
     }
