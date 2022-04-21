@@ -32,7 +32,7 @@ function changeSong(index) {
     const play = document.querySelector('.play')
 
     // if (play.src === "http://localhost:4004/Assets/Song/pause.png") {
-    if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
+    if (pl.src === "https://game-aider.herokuapp.com/Assets/Song/pause.png") {
         document.querySelector("body").classList.add("change");
     }
 
@@ -80,7 +80,7 @@ function playSong() {
 
 
     // if (play.src === "http://localhost:4004/Assets/Song/pause.png") {
-    if (pl.src === "https://indoors-app.herokuapp.com/Assets/Song/pause.png") {
+    if (pl.src === "https://game-aider.herokuapp.com/Assets/Song/pause.png") {
         document.querySelector("body").classList.add("change");
     }
 
