@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #1C0C5B;
+    height: 100vh;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#landing {
+    width: 90%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+#landing-img img {
+    height: 500px;
+    padding: 5px 5px;
+}
+
+#landing-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+#landing-details h1 {
+    padding: 0 10px;
+}
+
+#landing-details p {
+    font-size: 1.5rem;
+    padding: 50px 10px;
+}
+
+.home-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.home-element {
+    width: 20%;
+    background-color: #3D2C8D;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.home-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-details h3 {
+    padding: 10px 10px;
+}
+
+.home-details p {
+    padding: 15px 15px;
+}
+
+.home-element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.5);
+    background-color: #916BBF;
+    cursor: pointer;
+}
+
+.home-element:hover .home-details h3 {
+    background-color: #3D2C8D;
+}
+
+.home-details img {
+    width: 80%;
+    padding: 5px 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    .home-element {
+        width: 40%;
+    }
+
+    #landing-details {
+        text-align: center;
+        width: 80%;
+    }
+
+    #landing-img img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .home-element {
+        width: 70%;
+    }
+
+    #landing-img img {
+        height: 300px;
+    }
+
+    #landing-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    #landing-details p {
+        padding: 50px 5px;
+    }
+}

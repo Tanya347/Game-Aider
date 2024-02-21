@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/number.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <title>Game Aider</title>
+</head>
+
+<body>
+    <%- include('partials/navbar')%>
+        <section id="number-section">
+
+            <div class="dice-row">
+                <div class="dice-container">
+                    <h3>1 Dice Games</h2>
+                        <div class="dice">
+                            <img id="SingleDice" src="Assets/Dice/1.svg">
+                        </div>
+                        <button onclick="roll1()">ROLL</button>
+                        <div class="result">
+                            <p id="result1">Your roll is <span id="r1" class="result"></span></p>
+                        </div>
+                </div>
+
+                <div class="dice-container">
+                    <h3>2 Die Games</h2>
+                        <div class="dice">
+                            <img class="twoDie" src="Assets/Dice/1.svg">
+                            <img class="twoDie" src="Assets/Dice/6.svg">
+                        </div>
+                        <button onclick="roll2()">ROLL</button>
+                        <div class="result">
+                            <p id="result2">Your roll is <span id="r2" class="result"></span></p>
+                        </div>
+                </div>
+            </div>
+
+            <div id="bottom">
+                <h2 id="que">Want a random number within a range?</h2>
+                <div id="random-number">
+                    <label for="si">Enter lower bound</label><br>
+                    <input type="number" id="si" placeholder="lower bound"><br>
+                    <label for="ei">Enter upper bound</label><br>
+                    <input type="number" id="ei" placeholder="upper bound"><br>
+                </div>
+                <button id="numberButton">Generate Random Number</button>
+                <h3>Your random number is: <span id="answer" class="result"></span> </h3>
+            </div>
+        </section>
+        <script src="\js\number.js"></script>
+</body>
+
+</html>

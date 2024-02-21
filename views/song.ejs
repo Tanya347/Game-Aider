@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\song.css">
+    <link rel="stylesheet" href="\css\navbar.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <title>Game Aider</title>
+</head>
+
+<body>
+    <%- include('partials/navbar')%>
+        <section id="song-section">
+            <div class="dropdown-menu">
+                <button class="menu-btn">Choose Song</button>
+                <div class="menu-content">
+                    <a class="links s" href="#">Song1</a>
+                    <a class="links s" href="#"">Song2</a>
+                    <a class=" links s" href="#"">Song3</a>
+                    <a class=" links s" href="#">Song4</a>
+                    <a class="links s" href="#">Song5</a>
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="\Assets\dance-min.png" alt="" id="dance">
+                <div class="song-box">
+                    <div class="song-container">
+                        <img src="\Assets\Song\play.png" alt="" class="play" onclick="playSong()">
+                        <audio class=" song">
+                            <source src="\Assets\Song\Ddaeng.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <h3> We've got 5 songs for you to play games like musical chairs, passing the parcel or just for
+                dancing!<br><br>
+                you can choose any!</h3>
+        </section>
+
+        <script src="\js\song.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\tad.css">
+    <link rel="stylesheet" href="\css\navbar.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <title>Game Aider</title>
+</head>
+
+<body>
+    <%- include('partials/navbar')%>
+        <main id="tad-section">
+            <div id="upper-section">
+                <div class="sections">
+                    <h2>RANDOM NAME PICKER</h2>
+                    <textarea name="" id="names" placeholder="Enter names followed by a ','""></textarea>
+                <h2 id=" chosen"></h2>
+                <div class="name" id="names-popup">
+                    <div class="overlay" onclick="toggleAnswer()"></div>
+                    <div class="content">
+                        <button class="close-button" onclick="toggleAnswer()">&times;</button>
+                        <h1 style="color: #FFE2E2;">The Player Is</h1>
+                        <div id="display">
+                        </div>
+                    </div>
+                </div>
+                <button class="pick" onclick="pickName()">Pick</button>
+            </div>
+            <div class="sections">
+                <img id="rotate" src="\Assets\spinner.png" alt="">
+            </div>
+            </div>
+
+    <section id="options">
+        <div class="box">
+            <h2>Truth</h2>
+            <div class="popup" id="truth">
+                <div class="overlay" onclick="toggleTruth()"></div>
+                <div class="content">
+                    <button class="close-button" onclick="toggleTruth()">&times;</button>
+                    <h1>Truth Questions</h1>
+                    <h2>Click on a question to remove it</h2>
+                    <label for="add">Add your own question : </label>
+                    <input type="text" id="addTruth" placeholder="Add question">
+                    <button id="submit-question" onclick="addQuestion()">Add</button>
+                    <div id="truth-questions">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="toggleTruth()">View Questions</button>
+            <button class="btn" onclick="generateTruth()">Generate Question</button>
+            <div id="question"></div>
+        </div>
+
+        <div class="box">
+            <h2>Dare</h2>
+            <div class="popup" id="dare">
+                <div class="overlay" onclick="toggleDare()"></div>
+                <div class="content">
+                    <button class="close-button" onclick="toggleDare()">&times;</button>
+                    <h1>Dare Tasks</h1>
+                    <h2>Click on a task to remove it</h2>
+                    <label for="add">Add your own task : </label>
+                    <input type="text" id="addTask" placeholder="Add task">
+                    <button id="submit-task" onclick="addTask()">Add</button>
+                    <div id="dares">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="toggleDare()">View Dares</button>
+            <button class="btn" onclick="generateDare()">Generate Dare</button>
+            <div id="task"></div>
+        </div>
+
+        <div class="box">
+            <h2>Never Have I Ever</h2>
+            <div class="popup" id="never">
+                <div class="overlay" onclick="toggleNever()"></div>
+                <div class="content">
+                    <button class="close-button" onclick="toggleNever()">&times;</button>
+                    <h1>Never Have I Ever</h1>
+                    <h2>Click on the question to remove it</h2>
+                    <label for="add">Add your own question : </label>
+                    <input type="text" id="addNever" placeholder="Add question">
+                    <button id="submit-never" onclick="addNever()">Add</button>
+                    <div id="never-questions">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="toggleNever()">View Questions</button>
+            <button class="btn" onclick="generateNever()">Generate Never Have I Ever</button>
+            <div id="neverHaveI"></div>
+        </div>
+    </section>
+    </main>
+    <script src="\js\tad.js"></script>
+</body>
+
+</html>

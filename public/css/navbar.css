@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#hamburger {
+    max-height: 70px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #150050;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo img {
+    line-height: 70px;
+    padding: 0 20px;
+    height: 70px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    transform: translate(-50%, -60%);
+}
+
+a:hover {
+    background-color: #3D2C8D;
+    transition: 0.5s;
+    color: #FFEEEE;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 70px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#check,
+.checkbtn {
+    display: none;
+}
+
+@media (max-width: 1020px) {
+    .logo img {
+        padding: 0 10px;
+        height: 70px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 860px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        background: #1C0C5B;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: none;
+        color: #916BBF;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        margin-right: 0;
+    }
+
+    .checkbtn {
+        margin-left: 0;
+    }
+
+    ul {
+        height: fit-content;
+    }
+
+}

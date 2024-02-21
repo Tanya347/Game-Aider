@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\css\home.css">
+    <link rel="shortcut icon" href="\Assets\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="\css\navbar.css">
+    <title>Game Aider</title>
+</head>
+
+<body>
+
+    <%- include('partials/navbar')%>
+        <main class="home-main">
+            <div id="landing">
+                <div id="landing-details">
+                    <h1>Welcome to Game Aider</h1>
+                    <p>We offer tools that will instantly help you in playing various indoor games like board games,
+                        passing
+                        the parcel, truth and dare, never have I ever, dumb charades etc.</p>
+                </div>
+                <div id="landing-img">
+                    <img src="\Assets\home\indoor.png" alt="">
+                </div>
+            </div>
+
+            <div class="home-cards">
+
+                <div class="home-element">
+                    <a href="/number">
+                        <div class="home-details">
+                            <img src="\Assets\home\7.png" alt="">
+                            <h3>Dice</h3>
+                            <p>Lost your dice? Don't let that stop you. Roll in our die to continue the game</p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+                <div class="home-element">
+                    <a href="/song">
+                        <div class="home-details">
+                            <img src="\Assets\home\8.png" alt="">
+                            <h3>Musical Games</h3>
+                            <p>We got music for games like Pass the Parcel and Musical Chairs right at your fingertips
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="home-element">
+                    <a href="/tad">
+                        <div class="home-details">
+                            <img src="\Assets\home\9.png" alt="">
+                            <h3>Questions and Tasks</h3>
+                            <p>Can't come up with truth or dare questions? We got some for you to let the game going
+                                without
+                                having
+                                to think</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="home-element">
+                    <a href="/movie">
+                        <div class="home-details">
+                            <img src="\Assets\home\10.png" alt="">
+                            <h3>Dumb Charades</h3>
+                            <p>Use our random movie generator to quickly aid your dumb charades game</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+</body>
+
+</html>
